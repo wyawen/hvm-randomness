@@ -1,0 +1,124 @@
+MODE: IPI_HOLES
+LEARNING_ALGO: CB
+output_csv: D:\hvm\Results-009\post-atc\memcached-new\randomness\v2\160k\results-0524T1743-learning-1-5ms-deploy-full-3iter\SmartIPI_HOLES-0.1-sleep_ms\buf-1\0\hvmagent.csv
+primaryNames: Memcached
+hvmNames: CPUBully
+RUN_DURATION_SEC: 60
+bufferSize: 1
+REACTIVE_FIXED_BUFFER_MODE: 0
+DELAY_MS: 0
+LEARNING_MODE: 1
+PRED_ONE_OVER: 0
+FIXED_DELAY: 0
+LEARNING_MS: 5
+TIMING: 0
+DEBUG: 0
+NO_HARVESTING: 0
+PRIMARY_ALONE: 0
+FEEDBACK: 0
+FEEDBACK_MS: 0
+SLEEP_MS: 0.1
+PRIMARY_SIZE: 10
+MINROOT_MASK: 67108863
+dropBadFeatures: 0
+read_cpu_sleep_us: 50
+updatePrimary: 1
+DEBUG_PEAK: 0
+LOGGING: 1
+COST_FUNCTION: 0
+NO_PRED: 0
+PRED_PLUS_ONE: 0
+PRED_PLUS_OFFSET: 0
+LEARNING_RATE: 0.1
+modelName: full_feedback.model
+DEPLOY_ONLY: 1
+FIXED_BUFFER_MODE: 0
+MAX_HVM_CORES: 24
+MIN_HVM_CORES: 1
+LpIndex NodeNumber PackageId CoreId RootVpIndex
+------- ---------- --------- ------ -----------
+      0          0         0      0           0
+      1          0         0      0           1
+      2          0         0      1           2
+      3          0         0      1           3
+      4          0         0      2           4
+      5          0         0      2           5
+      6          0         0      3          -1
+      7          0         0      3          -1
+      8          0         0      4          -1
+      9          0         0      4          -1
+     10          0         0      5          -1
+     11          0         0      5          -1
+     12          0         0      8          -1
+     13          0         0      8          -1
+     14          0         0      9          -1
+     15          0         0      9          -1
+     16          0         0     10          -1
+     17          0         0     10          -1
+     18          0         0     11          -1
+     19          0         0     11          -1
+     20          0         0     12          -1
+     21          0         0     12          -1
+     22          0         0     13          -1
+     23          0         0     13          -1
+     24          0         0     16          -1
+     25          0         0     16          -1
+     26          0         0     17          -1
+     27          0         0     17          -1
+     28          0         0     18          -1
+     29          0         0     18          -1
+     30          0         0     19          -1
+     31          0         0     19          -1
+     32          0         0     20          -1
+     33          0         0     20          -1
+     34          0         0     21          -1
+     35          0         0     21          -1
+     36          0         0     24          -1
+     37          0         0     24          -1
+     38          0         0     25          -1
+     39          0         0     25          -1
+     40          0         0     26          -1
+     41          0         0     26          -1
+     42          0         0     27          -1
+     43          0         0     27          -1
+     44          0         0     28          -1
+     45          0         0     28          -1
+     46          0         0     29          -1
+     47          0         0     29          -1
+Physical Cores: 24 MinrootLPs: 26 MinRootMask: 0x0000000003ffffff
+Detected 48 LPs on machine
+HVMAgent initialized
+Mask 1: c000000
+Mask 2: 3c000000
+Mask 3: fc000000
+Mask 4: 3fc000000
+Mask 5: ffc000000
+Mask 6: 3ffc000000
+Mask 7: fffc000000
+Mask 8: 3fffc000000
+Mask 9: ffffc000000
+Mask 10: 3ffffc000000
+Mask 11: fffffc000000
+Initializing handle for: Memcachedwith _numcore:10
+Mask 1: c00000000000
+Mask 2: f00000000000
+Mask 3: fc0000000000
+Mask 4: ff0000000000
+Mask 5: ffc000000000
+Mask 6: fff000000000
+Mask 7: fffc00000000
+Mask 8: ffff00000000
+Mask 9: ffffc0000000
+Mask 10: fffff0000000
+Mask 11: fffffc000000
+Initializing handle for: CPUBullywith _numcore:1
+cb: vw initialized with 10 classes, loading model 
+************************
+always update learning model
+update under-predictions with (correct_label = observed_peak+1)
+use current busy
+************************
+HVM agent starting: Sun May 24 17:44:23 2020
+
+logs written
+Exiting

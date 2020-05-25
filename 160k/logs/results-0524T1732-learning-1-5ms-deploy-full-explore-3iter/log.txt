@@ -1,0 +1,531 @@
+﻿**********************
+Windows PowerShell transcript start
+Start time: 20200524173241
+Username: NORTHAMERICA\v-yawenw
+RunAs User: NORTHAMERICA\v-yawenw
+Configuration Name: 
+Machine: GCRSANDBOX009 (Microsoft Windows NT 10.0.17763.0)
+Host Application: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+Process ID: 6032
+PSVersion: 5.1.17763.1129
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.17763.1129
+BuildVersion: 10.0.17763.1129
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Transcript started, output file is D:\hvm\Results-009\post-atc\memcached-new\randomness\v2\160k\results-0524T1732-learning-1-5ms-deploy-full-explore-3iter\log.txt
+{
+    "abs_dir":  "D:\\hvm\\local-abs",
+    "abs_appsettings":  "appsettings.json",
+    "abs_data_dir":  "D:\\hvm\\abs-data",
+    "registry":  "D:\\hvm\\HarvestVM\\abs-registry",
+    "logger":  "D:\\hvm\\HypervMinrootLogger.exe",
+    "CpuGroups":  "D:\\hvm\\CpuGroups.exe",
+    "result_dir_base":  "D:\\hvm\\Results-009",
+    "reuse_existing_vm_instances":  false,
+    "buffer_sizes":  "1",
+    "iterations":  3,
+    "hvmagent_modes":  "SmartIPI_HOLES-0.1-sleep_ms",
+    "cpugroups_delay":  10000,
+    "ipi_delay":  1000,
+    "MinRootMask":  0,
+    "HvmVCPUs":  11,
+    "HvmTimeoutMin":  1,
+    "HvmHwThreadCountPerCore":  1,
+    "HvmAgentAffinity":  0,
+    "hvmagent":  {
+                     "path":  "D:\\hvm\\hvmagent.exe",
+                     "extra_args":  " --pin_primary "
+                 },
+    "smart_hvmagent":  {
+                           "path":  "D:\\hvm\\harvestvm.exe",
+                           "duration_sec":  62,
+                           "extra_args":  ""
+                       },
+    "LatSensitive":  {
+                         "vcpus":  11,
+                         "HwThreadCountPerCore":  1,
+                         "WorkerCnt":  4,
+                         "Duration":  62,
+                         "TracePath":  "trace-4-worker-80-qps-0.2-load-2-wakeups-const.txt"
+                     },
+    "CPUBully":  {
+                     "vcpus":  10,
+                     "HwThreadCountPerCore":  1,
+                     "Timeout":  1,
+                     "Workers":  11,
+                     "WarmupSeconds":  0
+                 },
+    "Memcached":  {
+                      "vcpus":  10,
+                      "ServerThreads":  8,
+                      "ServerMemoryMB":  4096,
+                      "ClientThreads":  1,
+                      "ClientQps":  160000,
+                      "HwThreadCountPerCore":  1,
+                      "DurationSec":  60
+                  },
+    "IndexServe":  {
+                       "vcpus":  9,
+                       "HwThreadCountPerCore":  1,
+                       "GetCaptionXLAWarmUpLogParameters":  "-q -SaasQueryPlan -LargeQueryLog -uniqueTraceIds -printPercentileLatencies -n 5 -c 10",
+                       "WarmUpLogPath":  "D:\\data\\querylogs\\warmup_query.log",
+                       "WarmUpLogQps":  2000,
+                       "RunWarmUpQueries":  1,
+                       "GetCaptionXLAQueryLogParameters":  "-q -SaasQueryPlan -LargeQueryLog -uniqueTraceIds -printPercentileLatencies -n 5 -c 10",
+                       "QueryLogPath":  "D:\\data\\querylogs\\PROD_2019-07-01_WebPrecision_Draco_25262_saaslego.tsv",
+                       "QueryLogPath_1":  "D:\\data\\querylogs\\warmup_query.log",
+                       "Orig_QueryLogPath":  "D:\\data\\querylogs\\PROD_2017-08-29_WebPrecision_Draco_24714.tsv",
+                       "QueryLogQps":  1500,
+                       "DurationSec":  60,
+                       "SaasQueryPlan":  " -SaasQueryPlan -LargeQueryLog ",
+                       "WarmupSeconds":  10
+                   },
+    "TeraSort":  {
+                     "vcpus":  10,
+                     "records":  10000000,
+                     "HwThreadCountPerCore":  1
+                 },
+    "PTeraSort":  {
+                      "vcpus":  10,
+                      "records":  10000000,
+                      "HwThreadCountPerCore":  1
+                  },
+    "HDInsight":  {
+                      "vcpus":  10,
+                      "Workers":  12,
+                      "Epochs":  2,
+                      "HwThreadCountPerCore":  1
+                  },
+    "PHDInsight":  {
+                       "vcpus":  10,
+                       "Workers":  12,
+                       "Epochs":  2,
+                       "HwThreadCountPerCore":  1
+                   },
+    "HostCountersFile":  "HostPerformanceCounters.csv",
+    "HostCounters":  [
+                         "\\Hyper-V Hypervisor Virtual Processor(_Total)\\% Total Run Time",
+                         "\\Hyper-V Hypervisor Virtual Processor(*)\\CPU Wait Time Per Dispatch",
+                         "\\Hyper-V Hypervisor Virtual Processor(*)\\CPU Wait Time Bucket X7",
+                         "\\Hyper-V Hypervisor Virtual Processor(*)\\CPU Wait Time Bucket X6",
+                         "\\Hyper-V Hypervisor Virtual Processor(*)\\CPU Wait Time Bucket X5",
+                         "\\Hyper-V Hypervisor Virtual Processor(*)\\CPU Wait Time Bucket X4",
+                         "\\Hyper-V Hypervisor Virtual Processor(*)\\CPU Wait Time Bucket X3",
+                         "\\Hyper-V Hypervisor Virtual Processor(*)\\CPU Wait Time Bucket X2",
+                         "\\Hyper-V Hypervisor Virtual Processor(*)\\CPU Wait Time Bucket X1",
+                         "\\Hyper-V Hypervisor Virtual Processor(*)\\CPU Wait Time Bucket 0",
+                         "\\Hyper-V Hypervisor Virtual Processor(*)\\CPU Wait Time Bucket 1",
+                         "\\Hyper-V Hypervisor Virtual Processor(*)\\CPU Wait Time Bucket 2",
+                         "\\Hyper-V Hypervisor Virtual Processor(*)\\CPU Wait Time Bucket 3",
+                         "\\Hyper-V Hypervisor Virtual Processor(*)\\CPU Wait Time Bucket 4",
+                         "\\Hyper-V Hypervisor Virtual Processor(*)\\CPU Wait Time Bucket 5",
+                         "\\Hyper-V Hypervisor Virtual Processor(*)\\CPU Wait Time Bucket 6",
+                         "\\Hyper-V Hypervisor Logical Processor(_Total)\\% Total Run Time",
+                         "\\Hyper-V Hypervisor Logical Processor(_Total)\\% Hypervisor Run Time",
+                         "\\Hyper-V Hypervisor Logical Processor(_Total)\\% Guest Run Time",
+                         "\\Hyper-V Hypervisor Virtual Processor(*)\\% Total Run Time",
+                         "\\Hyper-V Hypervisor Logical Processor(*)\\% Total Run Time",
+                         "\\Hyper-V Hypervisor Logical Processor(*)\\% Guest Run Time"
+                     ]
+}
+
+********************************
+*** Running Test:
+***     hvmagent-mode: SmartIPI_HOLES-0.1-sleep_ms
+***     buffer-size:   1
+***     Iter:  0  /   + 2
+********************************
+
+
+    Directory: D:\hvm\Results-009\post-atc\memcached-new\randomness\v2\160k\results-0524T1732-learning-1-5ms-deploy-ful
+    l-explore-3iter\SmartIPI_HOLES-0.1-sleep_ms\buf-1
+
+
+Mode                LastWriteTime         Length Name
+----                -------------         ------ ----
+d-----        5/24/2020   5:32 PM                0
+Removing existing CpuGroups
+
+
+Removed existing CpuGroups
+primary_names = Memcached
+hvm_names = CPUBully
+--buffer 1 --csv D:\hvm\Results-009\post-atc\memcached-new\randomness\v2\160k\results-0524T1732-learning-1-5ms-deploy-full-explore-3iter\SmartIPI_HOLES-0.1-sleep_ms\buf-1\0\hvmagent.csv --duration_sec 60 --primary_size 10  --primary_names Memcached  --hvm_names CPUBully --debug 0 --deploy_only 1 --model_name full_feedback.model --no_pred 0 --pred_plus_one 0 --pred_plus_offset 0 --learning_rate 0.1 --cost_function 0 --debug_peak 0 --logging 1 --minroot_mask 0x3ffffff --reactive_buffer_mode 0 --delay_ms 0 --mode IPI_HOLES  --learning_algo cb_explore --learning_mode 1 --learning_ms 5 --debug 0 --no_harvesting 0 --primary_alone 0 --timing 0 --feedback 0 --feedback_ms 0 --sleep_ms 0.1 --drop_bad_features 0 --read_cpu_sleep_us 50 --update_primary 1 --pred_one_over 0 --fixed_delay 0
+info: AzureBenchmarkSuite.Benchmarks.BenchmarkScenarioRunner[0]
+      Number of Logical Cores: 6. Required Logical Cores: 21.
+info: AzureBenchmarkSuite.Benchmarks.BenchmarkScenarioRunner[0]
+      Execute Scenario: Gen5.MemcachedHVM
+info: AzureBenchmarkSuite.Benchmarks.BenchmarkScenarioRunner[0]
+
+************************ setting up virtual switch *************************************
+
+info: AzureBenchmarkSuite.PSWrapper[0]
+      Found existing switch, removing and readding.
+fail: AzureBenchmarkSuite.PSWrapper[0]
+      Hyper-V was unable to find a virtual switch with name "ABS-Internal".
+info: AzureBenchmarkSuite.PSWrapper[0]
+      Creating VM switch.
+Script completed.
+info: AzureBenchmarkSuite.Benchmarks.BenchmarkScenarioRunner[0]
+      Setting of virtual network completed.
+info: AzureBenchmarkSuite.Benchmarks.BenchmarkScenarioRunner[0]
+
+************************ setting up VMs *************************************
+
+info: AzureBenchmarkSuite.Benchmarks.SetupVMStep[0]
+      [ABS] Benchmark name is Memcached
+info: AzureBenchmarkSuite.Benchmarks.SetupVMStep[0]
+      [ABS] Benchmark name is CPUBully
+info: AzureBenchmarkSuite.PSWrapper[0]
+      BenchmarkSpecification AzureBenchmarkSuite.Config.BenchmarkVMSpec
+info: AzureBenchmarkSuite.PSWrapper[0]
+      BenchmarkSpecification AzureBenchmarkSuite.Config.BenchmarkVMSpec
+info: AzureBenchmarkSuite.PSWrapper[0]
+      VHD D:\hvm\abs-data\Memcached-0-0-OS-VHD.vhd already exists on host. Will not copy again.
+info: AzureBenchmarkSuite.PSWrapper[0]
+      VHD D:\hvm\abs-data\CPUBully-1-0-OS-VHD.vhd already exists on host. Will not copy again.
+info: AzureBenchmarkSuite.PSWrapper[0]
+      Creating VM Memcached-0-0
+info: AzureBenchmarkSuite.PSWrapper[0]
+      Creating VM CPUBully-1-0
+info: AzureBenchmarkSuite.PSWrapper[0]
+      Setting virtual cores and memory for Memcached-0-0
+info: AzureBenchmarkSuite.PSWrapper[0]
+      Setting virtual cores and memory for CPUBully-1-0
+info: AzureBenchmarkSuite.PSWrapper[0]
+      Setting HwThreadsPerCore for CPUBully-1-0
+info: AzureBenchmarkSuite.PSWrapper[0]
+      Setting HwThreadsPerCore for Memcached-0-0
+info: AzureBenchmarkSuite.PSWrapper[0]
+      Setting static memory configuration for VM
+info: AzureBenchmarkSuite.PSWrapper[0]
+      Setting static memory configuration for VM
+info: AzureBenchmarkSuite.PSWrapper[0]
+      Creating checkpoint for VM Memcached-0-0 before running the experiments.
+info: AzureBenchmarkSuite.PSWrapper[0]
+      Creating checkpoint for VM CPUBully-1-0 before running the experiments.
+info: AzureBenchmarkSuite.PSWrapper[0]
+      Starting VM Memcached-0-0
+info: AzureBenchmarkSuite.PSWrapper[0]
+      Starting VM CPUBully-1-0
+info: AzureBenchmarkSuite.PSWrapper[0]
+      Assigning ip 192.168.10.20 to Memcached-0-0
+info: AzureBenchmarkSuite.PSWrapper[0]
+      Skipping reassignment: keep the same default ip
+info: AzureBenchmarkSuite.PSWrapper[0]
+      Vm not ready, sleeping for 10 seconds
+info: AzureBenchmarkSuite.PSWrapper[0]
+      Checking if VM is ready for connection
+fail: AzureBenchmarkSuite.PSWrapper[0]
+      No connection could be made because the target machine actively refused it
+info: AzureBenchmarkSuite.PSWrapper[0]
+      Vm not ready, sleeping for 10 seconds
+info: AzureBenchmarkSuite.PSWrapper[0]
+      VM CPUBully-1-0 is accepting commands.
+info: AzureBenchmarkSuite.PSWrapper[0]
+      VM CPUBully-1-0 is ready.
+Script completed.
+info: AzureBenchmarkSuite.PSWrapper[0]
+      Checking if VM is ready for connection
+info: AzureBenchmarkSuite.PSWrapper[0]
+      Vm started.
+info: AzureBenchmarkSuite.PSWrapper[0]
+      VM Memcached-0-0 is ready.
+Script completed.
+info: AzureBenchmarkSuite.Benchmarks.BenchmarkScenarioRunner[0]
+      Setting of VMs completed.
+info: AzureBenchmarkSuite.Benchmarks.BenchmarkScenarioRunner[0]
+
+************************ setting up benchmarks *************************************
+
+info: AzureBenchmarkSuite.PSWrapper[0]
+      Copying dependencies, and generating test data.
+info: AzureBenchmarkSuite.PSWrapper[0]
+      Starting the setup script
+warn: AzureBenchmarkSuite.PSWrapper[0]
+      Host key is not being verified since Force switch is used.
+info: AzureBenchmarkSuite.PSWrapper[0]
+      (pkill -9 memcached); sleep 2; memcached -d -p 11212 -t 8 -m 4096
+Script completed.
+info: AzureBenchmarkSuite.PSWrapper[0]
+      Memcached server started at 2020-05-24T17:33:28.1810764-07:00
+info: AzureBenchmarkSuite.PSWrapper[0]
+      sh run_mutilate.sh '-s 127.0.0.1:11212' 1000000
+info: AzureBenchmarkSuite.PSWrapper[0]
+      Memcached server database loaded at 2020-05-24T17:33:39.7220376-07:00
+info: AzureBenchmarkSuite.PSWrapper[0]
+      Last login: Sun May 24 17:33:26 2020 from 192.168.10.1
+      echo stats | nc 127.0.0.1 11212 | grep items
+      administrator@memcached:~$ echo stats | nc 127.0.0.1 11212 | grep items
+      STAT curr_[01;31m[Kitems[m[K 1000000
+      STAT total_[01;31m[Kitems[m[K 1000000
+      STAT crawler_[01;31m[Kitems[m[K_checked 0
+      administrator@memcached:~$
+Script completed.
+info: AzureBenchmarkSuite.Benchmarks.BenchmarkScenarioRunner[0]
+      Setting benchmarks completed.
+info: AzureBenchmarkSuite.Benchmarks.BenchmarkScenarioRunner[0]
+
+************************ Starting host resource monitoring *************************************
+
+info: AzureBenchmarkSuite.Benchmarks.BenchmarkScenarioRunner[0]
+      Setting of host monitoring completed.
+info: AzureBenchmarkSuite.Benchmarks.BenchmarkScenarioRunner[0]
+
+************************ Starting resource monitoring for individual VMs *************************************
+
+info: AzureBenchmarkSuite.PSWrapper[0]
+      Starting vm monitoring for CPUBully-1-0
+info: AzureBenchmarkSuite.PSWrapper[0]
+      creating file c:\counters-list.txt
+info: AzureBenchmarkSuite.PSWrapper[0]
+      Starting process typeperf with output file: C:\ResourceLogs\Counters.txt
+Script completed.
+info: AzureBenchmarkSuite.Benchmarks.BenchmarkScenarioRunner[0]
+      Setting of VM monitoring completed.
+info: AzureBenchmarkSuite.Benchmarks.BenchmarkScenarioRunner[0]
+
+************************ Running benchmarks *************************************
+
+info: AzureBenchmarkSuite.Benchmarks.RunBenchmarkStep[0]
+      Scenario duration is set to 1 seconds
+info: AzureBenchmarkSuite.Benchmarks.RunBenchmarkStep[0]
+      5/25/2020 12:33:51 AM +00:00: Scenario started
+info: AzureBenchmarkSuite.Benchmarks.RunBenchmarkStep[0]
+      Scenario run instance: 0 {0}
+info: AzureBenchmarkSuite.Benchmarks.RunBenchmarkStep[0]
+      Scenario run instance: 0 {0}
+info: AzureBenchmarkSuite.Benchmarks.RunBenchmarkStep[0]
+      05-24-2020-17-33-51-PM: Benchmark is started in Memcached-0-0
+info: AzureBenchmarkSuite.Benchmarks.RunBenchmarkStep[0]
+      [ABS] Script path: D:\hvm\HarvestVM\abs-registry\.\Benchmarks\Memcached\.\MemcachedRunBenchmark.ps1
+info: AzureBenchmarkSuite.PSWrapper[0]
+      Starting the run script
+info: AzureBenchmarkSuite.PSWrapper[0]
+      Running benchmark
+warn: AzureBenchmarkSuite.PSWrapper[0]
+      Host key is not being verified since Force switch is used.
+info: AzureBenchmarkSuite.PSWrapper[0]
+       +  >>> Launch memcached client
+info: AzureBenchmarkSuite.PSWrapper[0]
+      /home/administrator/Memcached/FinalResults/0
+info: AzureBenchmarkSuite.PSWrapper[0]
+      rm -rf /home/administrator/Memcached/FinalResults/0 && mkdir -p /home/administrator/Memcached/FinalResults/0; pkil
+l -9 mutilate; (./mutilate/mutilate -T 1 -A &) ; sleep 5; date > /home/administrator/Memcached/FinalResults/0/results.tx
+t;(echo ./mutilate/mutilate -s 127.0.0.1:11212 --noload -K fb_key -V fb_value  -r 1000000 -i fb_ia -u 0.00 --blocking -c
+ 16 -d 10 -C 16 -D 10 -a 127.0.0.1 -T 1 -q 161000 -Q 160000 -w 10 -t 60 2&>1 >> /home/administrator/Memcached/FinalResul
+ts/0/results.txt);(./mutilate/mutilate -s 127.0.0.1:11212 --noload -K fb_key -V fb_value  -r 1000000 -i fb_ia -u 0.00 --
+blocking -c 16 -d 10 -C 16 -D 10 -a 127.0.0.1 -T 1 -q 161000 -Q 160000 -w 10 -t 60 2&>1 >> /home/administrator/Memcached
+/FinalResults/0/results.txt);date >> /home/administrator/Memcached/FinalResults/0/results.txt;pkill -9 mutilate
+info: AzureBenchmarkSuite.Benchmarks.RunBenchmarkStep[0]
+      05-24-2020-17-34-01-PM: Benchmark is started in CPUBully-1-0
+info: AzureBenchmarkSuite.Benchmarks.RunBenchmarkStep[0]
+      [ABS] Script path: D:\hvm\HarvestVM\abs-registry\.\Benchmarks\CPUBully\.\CPUBullyRunBenchmark.ps1
+info: AzureBenchmarkSuite.PSWrapper[0]
+      Running benchmark
+info: AzureBenchmarkSuite.PSWrapper[0]
+      Sleeping 0 seconds before launching hvmagent & CPUBully workload
+info: AzureBenchmarkSuite.PSWrapper[0]
+      Starting hvmagent: D:\hvm\harvestvm.exe at 05/24/2020 17:34:02
+info: AzureBenchmarkSuite.PSWrapper[0]
+      5/24/2020 5:34:02 PM +  >>> hvmagent started at 05/24/2020 17:34:02
+info: AzureBenchmarkSuite.PSWrapper[0]
+      Setting hvmagent process priority class to High
+info: AzureBenchmarkSuite.PSWrapper[0]
+      Launching CPUBully workload at 05/24/2020 17:34:02
+info: AzureBenchmarkSuite.PSWrapper[0]
+      5/24/2020 5:34:03 PM +  >>> starting to run bully
+Num weight bits = 18
+learning rate = 0.1
+initial_t = 0
+power_t = 0
+using no cache
+Reading datafile =
+num sources = 1
+
+finished run
+number of examples = 0
+weighted example sum = 0.000000
+weighted label sum = 0.000000
+average loss = n.a.
+total feature number = 0
+info: AzureBenchmarkSuite.PSWrapper[0]
+      5/24/2020 5:35:05 PM +  >>> bully finished
+info: AzureBenchmarkSuite.PSWrapper[0]
+       05/24/2020 17:35:09 Memcached finished execution.
+info: AzureBenchmarkSuite.PSWrapper[0]
+      Benchmark completed
+Script completed.
+info: AzureBenchmarkSuite.Benchmarks.RunBenchmarkStep[0]
+      05-24-2020-17-35-09-PM: Benchmark Memcached is finished in Memcached-0-0
+info: AzureBenchmarkSuite.PSWrapper[0]
+      Waiting for hvmagent process
+info: AzureBenchmarkSuite.PSWrapper[0]
+      Benchmark completed
+Script completed.
+info: AzureBenchmarkSuite.Benchmarks.RunBenchmarkStep[0]
+      05-24-2020-17-35-11-PM: Benchmark CPUBully is finished in CPUBully-1-0
+info: AzureBenchmarkSuite.Benchmarks.RunBenchmarkStep[0]
+      5/25/2020 12:35:11 AM +00:00: Scenario completed
+info: AzureBenchmarkSuite.Benchmarks.BenchmarkScenarioRunner[0]
+      Running benchmarks completed.
+info: AzureBenchmarkSuite.Benchmarks.BenchmarkScenarioRunner[0]
+
+************************ Stopping resource monitoring for individual VMs *************************************
+
+Script completed.
+info: AzureBenchmarkSuite.Benchmarks.BenchmarkScenarioRunner[0]
+      stopped resource monitoring
+info: AzureBenchmarkSuite.Benchmarks.BenchmarkScenarioRunner[0]
+
+************************ Stopping host resource monitoring *************************************
+
+info: AzureBenchmarkSuite.Benchmarks.BenchmarkScenarioRunner[0]
+      stopped host resource monitoring
+info: AzureBenchmarkSuite.Benchmarks.BenchmarkScenarioRunner[0]
+
+************************ Collecting results *************************************
+
+info: AzureBenchmarkSuite.Benchmarks.CollectResultStep[0]
+      [ABS] Collecting results from VM Memcached-0-0 with IP 192.168.10.20
+info: AzureBenchmarkSuite.PSWrapper[0]
+      Copying /home/administrator/Memcached/FinalResults to D:\hvm\Results-009\post-atc\memcached-new\randomness\v2\160k
+\results-0524T1732-learning-1-5ms-deploy-full-explore-3iter\SmartIPI_HOLES-0.1-sleep_ms\buf-1\0\Memcached-0-0-result
+info: AzureBenchmarkSuite.PSWrapper[0]
+      Linux VM. IP: 192.168.10.20
+warn: AzureBenchmarkSuite.PSWrapper[0]
+      Host key is not being verified since Force switch is used.
+Script completed.
+info: AzureBenchmarkSuite.Benchmarks.CollectResultStep[0]
+      [ABS] Parking key metric: D:\hvm\HarvestVM\abs-registry\.\Benchmarks\Memcached\.\MemcachedParseResults.ps1
+warn: AzureBenchmarkSuite.PSWrapper[0]
+      D:\hvm\Results-009\post-atc\memcached-new\randomness\v2\160k\results-0524T1732-learning-1-5ms-deploy-full-explore-
+3iter\SmartIPI_HOLES-0.1-sleep_ms\buf-1\0\Memcached-0-0-result
+warn: AzureBenchmarkSuite.PSWrapper[0]
+      @{name=P99(us); value=1084}
+Script completed.
+info: AzureBenchmarkSuite.Benchmarks.CollectResultStep[0]
+      [ABS] Collecting results from VM CPUBully-1-0 with IP 192.168.10.22
+info: AzureBenchmarkSuite.PSWrapper[0]
+      Copying C:\CPUBully\FinalResults to D:\hvm\Results-009\post-atc\memcached-new\randomness\v2\160k\results-0524T1732
+-learning-1-5ms-deploy-full-explore-3iter\SmartIPI_HOLES-0.1-sleep_ms\buf-1\0\CPUBully-1-0-result
+info: AzureBenchmarkSuite.PSWrapper[0]
+      Copying resource counters to D:\hvm\Results-009\post-atc\memcached-new\randomness\v2\160k\results-0524T1732-learni
+ng-1-5ms-deploy-full-explore-3iter\SmartIPI_HOLES-0.1-sleep_ms\buf-1\0\CPUBully-1-0-result
+Script completed.
+info: AzureBenchmarkSuite.Benchmarks.CollectResultStep[0]
+      [ABS] Parking key metric: D:\hvm\HarvestVM\abs-registry\.\Benchmarks\CPUBully\.\CPUBullyParseResults.ps1
+info: AzureBenchmarkSuite.PSWrapper[0]
+      content Config_file:C:\CPUBully\.\input.ini Millisecs:1 NumberOfActiveWorkers: 11 NumberOfLogicalProcessors: 11 St
+opFlag:False Worker:CPUBoundSum PinnedThreads: False RandomWorkerPausing: False ProcessAffinityMask: 0 Millisecs:60000 N
+umberOfActiveWorkers: 11 NumberOfLogicalProcessors: 11 StopFlag:False Worker:CPUBoundSum PinnedThreads: False RandomWork
+erPausing: False ProcessAffinityMask: 0 Processor count:11 Current run:5/24/2020 5:34:03 PM Process Id:6064  ThreadPool:
+:GetMinThreads workerThreads:19, completionPortThreads:11 ThreadPool::GetMaxThreads workerThreads:2047, completionPortTh
+reads:1000 Start! Worker: 0, Thread: 4, Count: 0 Start! Worker: 7, Thread: 12, Count: 0 Start! Worker: 10, Thread: 3, Co
+unt: 0 Start! Worker: 9, Thread: 14, Count: 0 Start! Worker: 1, Thread: 8, Count: 0 Start! Worker: 4, Thread: 10, Count:
+ 0 Start! Worker: 8, Thread: 13, Count: 0 Start! Worker: 3, Thread: 16, Count: 0 Start! Worker: 2, Thread: 7, Count: 0 S
+tart! Worker: 5, Thread: 11, Count: 0 Start! Worker: 6, Thread: 6, Count: 0 Combined Progress: 0, sec: 1.1562671, rate:
+0 Combined Progress: 0, sec: 2.2875628, rate: 0 Combined Progress: 0, sec: 3.3980155, rate: 0 Combined Progress: 0, sec:
+ 4.5938473, rate: 0 Combined Progress: 0, sec: 5.7860387, rate: 0 Combined Progress: 0, sec: 6.9723036, rate: 0 Combined
+ Progress: 0, sec: 8.1090007, rate: 0 Combined Progress: 0, sec: 9.3118724, rate: 0 Combined Progress: 0, sec: 10.483520
+6, rate: 0 Combined Progress: 0, sec: 11.53825, rate: 0 Combined Progress: 0, sec: 12.9362152, rate: 0 Combined Progress
+: 0, sec: 14.1182282, rate: 0 Combined Progress: 5, sec: 15.5015005, rate: 0.322549420296442 Combined Progress: 10, sec:
+ 16.6856743, rate: 0.599316504697685 Combined Progress: 11, sec: 17.8962922, rate: 0.614652458569044 Combined Progress:
+11, sec: 19.1228844, rate: 0.575227030081299 Combined Progress: 11, sec: 20.3706237, rate: 0.539993284545333 Combined Pr
+ogress: 11, sec: 21.5650045, rate: 0.51008568071479 Combined Progress: 11, sec: 22.709492, rate: 0.48437895484408 Combin
+ed Progress: 11, sec: 23.953433, rate: 0.459224362537094 Combined Progress: 11, sec: 25.0003243, rate: 0.439994292394039
+ Combined Progress: 11, sec: 26.1907252, rate: 0.419996006830693 Combined Progress: 11, sec: 27.3267877, rate: 0.4025354
+21314815 Combined Progress: 11, sec: 28.3655467, rate: 0.387794394246595 Combined Progress: 11, sec: 29.5751769, rate: 0
+.371933531866719 Combined Progress: 13, sec: 30.7092984, rate: 0.423324552409833 Combined Progress: 19, sec: 31.9205086,
+ rate: 0.595228611113045 Combined Progress: 21, sec: 33.0989141, rate: 0.634461902180652 Combined Progress: 22, sec: 34.
+2780684, rate: 0.641809793459657 Combined Progress: 22, sec: 35.4847996, rate: 0.619983774686444 Combined Progress: 22,
+sec: 36.6704163, rate: 0.599938648637594 Combined Progress: 22, sec: 37.840437, rate: 0.581388634597428 Combined Progres
+s: 22, sec: 38.9181128, rate: 0.565289486493292 Combined Progress: 22, sec: 40.0894293, rate: 0.548773090167188 Combined
+ Progress: 22, sec: 41.2373246, rate: 0.533497267667069 Combined Progress: 22, sec: 42.3103246, rate: 0.51996764874737 C
+ombined Progress: 22, sec: 43.5099041, rate: 0.505632003909657 Combined Progress: 22, sec: 44.6868315, rate: 0.492315057
+065525 Combined Progress: 23, sec: 45.7445253, rate: 0.502792407379075 Combined Progress: 29, sec: 46.9332348, rate: 0.6
+178990245096 Combined Progress: 30, sec: 48.1353177, rate: 0.623243003961725 Combined Progress: 32, sec: 49.3467383, rat
+e: 0.64847244422637 Combined Progress: 33, sec: 50.5140645, rate: 0.653283403872599 Combined Progress: 33, sec: 51.72014
+82, rate: 0.638049215798651 Combined Progress: 33, sec: 52.9418746, rate: 0.623325113614318 Combined Progress: 33, sec:
+54.1476822, rate: 0.609444368793315 Combined Progress: 33, sec: 55.3375917, rate: 0.596339648803329 Combined Progress: 3
+3, sec: 56.7227101, rate: 0.581777562140847 Combined Progress: 33, sec: 57.7450477, rate: 0.571477577981116 Combined Pro
+gress: 33, sec: 58.7584011, rate: 0.561621817173647 Combined Progress: 34, sec: 59.9381186, rate: 0.567251705494807 End!
+ Worker: 10, Thread: 3, Count: 4 End! Worker: 0, Thread: 4, Count: 3 End! Worker: 2, Thread: 7, Count: 4 End! Worker: 7,
+ Thread: 12, Count: 3 End! Worker: 8, Thread: 13, Count: 3 End! Worker: 6, Thread: 6, Count: 3 End! Worker: 1, Thread: 8
+, Count: 4 End! Worker: 9, Thread: 14, Count: 3 End! Worker: 5, Thread: 11, Count: 3 End! Worker: 3, Thread: 16, Count:
+3 End! Worker: 4, Thread: 10, Count: 3 Combined Progress: 36, sec: 60.9598105, rate: 0.590553016892991
+info: AzureBenchmarkSuite.PSWrapper[0]
+      progress = 36
+Script completed.
+info: AzureBenchmarkSuite.Benchmarks.BenchmarkScenarioRunner[0]
+      Collecting results completed.
+info: AzureBenchmarkSuite.Benchmarks.BenchmarkScenarioRunner[0]
+
+************************ Cleaning up ****************************
+
+info: AzureBenchmarkSuite.PSWrapper[0]
+      Stopping VM CPUBully-1-0
+info: AzureBenchmarkSuite.PSWrapper[0]
+      Stopping VM Memcached-0-0
+info: AzureBenchmarkSuite.PSWrapper[0]
+      Restoring checkpoint for VM CPUBully-1-0 to before running the experiments.
+info: AzureBenchmarkSuite.PSWrapper[0]
+      Removing checkpoint CPUBully-1-0
+info: AzureBenchmarkSuite.PSWrapper[0]
+      Removing vm CPUBully-1-0
+info: AzureBenchmarkSuite.PSWrapper[0]
+      Restoring checkpoint for VM Memcached-0-0 to before running the experiments.
+info: AzureBenchmarkSuite.PSWrapper[0]
+      Removing checkpoint Memcached-0-0
+info: AzureBenchmarkSuite.PSWrapper[0]
+      Removing vm Memcached-0-0
+Script completed.
+Script completed.
+info: AzureBenchmarkSuite.Benchmarks.BenchmarkScenarioRunner[0]
+      Cleanup completed.
+
+
+
+********************************
+*** Running Test:
+***     hvmagent-mode: SmartIPI_HOLES-0.1-sleep_ms
+***     buffer-size:   1
+***     Iter:  1  /   + 2
+********************************
+d-----        5/24/2020   5:35 PM                1
+Removing existing CpuGroups
+
+
+Removed existing CpuGroups
+primary_names = Memcached
+hvm_names = CPUBully
+--buffer 1 --csv D:\hvm\Results-009\post-atc\memcached-new\randomness\v2\160k\results-0524T1732-learning-1-5ms-deploy-full-explore-3iter\SmartIPI_HOLES-0.1-sleep_ms\buf-1\1\hvmagent.csv --duration_sec 60 --primary_size 10  --primary_names Memcached  --hvm_names CPUBully --debug 0 --deploy_only 1 --model_name full_feedback.model --no_pred 0 --pred_plus_one 0 --pred_plus_offset 0 --learning_rate 0.1 --cost_function 0 --debug_peak 0 --logging 1 --minroot_mask 0x3ffffff --reactive_buffer_mode 0 --delay_ms 0 --mode IPI_HOLES  --learning_algo cb_explore --learning_mode 1 --learning_ms 5 --debug 0 --no_harvesting 0 --primary_alone 0 --timing 0 --feedback 0 --feedback_ms 0 --sleep_ms 0.1 --drop_bad_features 0 --read_cpu_sleep_us 50 --update_primary 1 --pred_one_over 0 --fixed_delay 0
+
+
+
+
+********************************
+*** Running Test:
+***     hvmagent-mode: SmartIPI_HOLES-0.1-sleep_ms
+***     buffer-size:   1
+***     Iter:  2  /   + 2
+********************************
+d-----        5/24/2020   5:38 PM                2
+Removing existing CpuGroups
+
+
+Removed existing CpuGroups
+primary_names = Memcached
+hvm_names = CPUBully
+--buffer 1 --csv D:\hvm\Results-009\post-atc\memcached-new\randomness\v2\160k\results-0524T1732-learning-1-5ms-deploy-full-explore-3iter\SmartIPI_HOLES-0.1-sleep_ms\buf-1\2\hvmagent.csv --duration_sec 60 --primary_size 10  --primary_names Memcached  --hvm_names CPUBully --debug 0 --deploy_only 1 --model_name full_feedback.model --no_pred 0 --pred_plus_one 0 --pred_plus_offset 0 --learning_rate 0.1 --cost_function 0 --debug_peak 0 --logging 1 --minroot_mask 0x3ffffff --reactive_buffer_mode 0 --delay_ms 0 --mode IPI_HOLES  --learning_algo cb_explore --learning_mode 1 --learning_ms 5 --debug 0 --no_harvesting 0 --primary_alone 0 --timing 0 --feedback 0 --feedback_ms 0 --sleep_ms 0.1 --drop_bad_features 0 --read_cpu_sleep_us 50 --update_primary 1 --pred_one_over 0 --fixed_delay 0
+
+
+
+**********************
+Windows PowerShell transcript end
+End time: 20200524174041
+**********************

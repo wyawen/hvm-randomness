@@ -1,0 +1,33 @@
+vw -t -i model-partial-160k 160k_data.txt -p 160k_pred_prob.txt
+only testing
+predictions = 160k_pred_prob.txt
+Num weight bits = 18
+learning rate = 0.5
+initial_t = 0
+power_t = 0.5
+using no cache
+Reading datafile = 160k_data.txt
+num sources = 1
+average  since         example        example  current  current  current
+loss     last          counter         weight    label  predict features
+0.000000 0.000000            1            1.0        6 4:1.000000        6
+0.000000 0.000000            2            2.0        6 4:1.000000        6
+0.000000 0.000000            4            4.0        6 4:1.000000        6
+0.000000 0.000000            8            8.0        5 4:1.000000        6
+0.000000 0.000000           16           16.0        5 4:1.000000        6
+0.000000 0.000000           32           32.0        6 4:1.000000        6
+0.000000 0.000000           64           64.0        6 4:1.000000        6
+0.000000 0.000000          128          128.0        6 4:1.000000        6
+0.000000 0.000000          256          256.0        6 4:1.000000        6
+0.000000 0.000000          512          512.0        6 4:1.000000        6
+0.000000 0.000000         1024         1024.0        6 4:1.000000        6
+0.000000 0.000000         2048         2048.0        6 4:1.000000        6
+0.000000 0.000000         4096         4096.0        6 4:1.000000        6
+0.000000 0.000000         8192         8192.0        6 4:1.000000        6
+
+finished run
+number of examples = 10455
+weighted example sum = 10455.000000
+weighted label sum = 0.000000
+average loss = 0.000000
+total feature number = 62730
