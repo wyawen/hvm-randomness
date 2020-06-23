@@ -1,0 +1,15 @@
+Sun May 24 16:47:03 PDT 2020
+./mutilate/mutilate -s 127.0.0.1:11212 --noload -K fb_key -V fb_value -r 1000000 -i fb_ia -u 0.00 --blocking -c 16 -d 10 -C 16 -D 10 -a 127.0.0.1 -T 1 -q 161000 -Q 160000 -w 10 -t 60 2
+#type       avg     std     min     5th    10th    90th    95th    99th
+read      591.6   176.8    66.3   359.3   382.8   813.4   850.2   950.8
+update      0.0     0.0     0.0     0.0     0.0     0.0     0.0     0.0
+op_q        7.6     2.4     1.0     3.0     4.0    10.6    10.7    10.8
+
+Total QPS = 160956.4 (9657448 / 60.0s)
+
+Misses = 0 (0.0%)
+Skipped TXs = 0 (0.0%)
+
+RX 2382657273 bytes :   37.9 MB/s
+TX  407744224 bytes :    6.5 MB/s
+Sun May 24 16:48:15 PDT 2020

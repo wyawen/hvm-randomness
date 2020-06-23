@@ -1,0 +1,53 @@
+{
+    "ScenarioName":  "Gen5.MemcachedHVM",
+    "ScenarioDuration":  1,
+    "ConcurrentBenchmarks":  [
+                                 {
+                                     "BenchmarkName":  "Memcached",
+                                     "NumberOfInstances":  1,
+                                     "VMConfig":  {
+                                                      "VCPUCount":  10,
+                                                      "MemorySizeInGB":  16,
+                                                      "Generation":  1,
+                                                      "HwThreadCountPerCore":  1
+                                                  },
+                                     "CustomInputs":  {
+                                                          "ServerThreads":  8,
+                                                          "ServerMemoryMB":  4096,
+                                                          "ClientThreads":  1,
+                                                          "ClientQps":  160000,
+                                                          "DurationSec":  60,
+                                                          "MemcachedNull":  0
+                                                      },
+                                     "ReuseExistingInstances":  false,
+                                     "DisableCleanupVMInstances":  false,
+                                     "WarmupTimeInSeconds":  10
+                                 },
+                                 {
+                                     "BenchmarkName":  "CPUBully",
+                                     "NumberOfInstances":  1,
+                                     "VMConfig":  {
+                                                      "VCPUCount":  11,
+                                                      "MemorySizeInGB":  8,
+                                                      "Generation":  1,
+                                                      "HwThreadCountPerCore":  1
+                                                  },
+                                     "CustomInputs":  {
+                                                          "Workers":  11,
+                                                          "Timeout":  1,
+                                                          "HvmAgentPath":  "D:\\hvm\\harvestvm.exe",
+                                                          "HvmAgentArgs":  "--buffer 1 --csv D:\\hvm\\Results\\post-atc\\memcached-new\\randomness\\newlog\\160k\\results-0605T1139-learning-1-5ms-deploy-full\\SmartIPI_HOLES-0.1-sleep_ms\\buf-1\\0\\hvmagent.csv --duration_sec 60 --primary_size 10  --primary_names Memcached  --hvm_names CPUBully --debug 0 --deploy_only 1 --model_name full_feedback.model --no_pred 0 --pred_plus_one 0 --pred_plus_offset 0 --learning_rate 0.1 --cost_function 0 --debug_peak 1 --logging 1 --minroot_mask 0x3ffffff --reactive_buffer_mode 0 --delay_ms 0 --mode IPI_HOLES  --learning_algo cb --learning_mode 1 --learning_ms 5 --debug 0 --no_harvesting 0 --primary_alone 0 --timing 0 --feedback 0 --feedback_ms 0 --sleep_ms 0.1 --drop_bad_features 0 --read_cpu_sleep_us 50 --update_primary 1 --pred_one_over 0 --fixed_delay 0   ",
+                                                          "HvmAgentLog":  "D:\\hvm\\Results\\post-atc\\memcached-new\\randomness\\newlog\\160k\\results-0605T1139-learning-1-5ms-deploy-full\\SmartIPI_HOLES-0.1-sleep_ms\\buf-1\\0\\hvmagentlog.txt",
+                                                          "HvmAgentPriority":  "High",
+                                                          "HvmAgentAffinity":  0,
+                                                          "LoggerPath":  "D:\\hvm\\HypervMinrootLogger.exe",
+                                                          "LoggerArgs":  "-f D:\\hvm\\Results\\post-atc\\memcached-new\\randomness\\newlog\\160k\\results-0605T1139-learning-1-5ms-deploy-full\\SmartIPI_HOLES-0.1-sleep_ms\\buf-1\\0\\log.dat -p 60 -m 0xfcfc",
+                                                          "LoggerLog":  "D:\\hvm\\Results\\post-atc\\memcached-new\\randomness\\newlog\\160k\\results-0605T1139-learning-1-5ms-deploy-full\\SmartIPI_HOLES-0.1-sleep_ms\\buf-1\\0\\loggerlog.txt",
+                                                          "WarmupSeconds":  0
+                                                      },
+                                     "ReuseExistingInstances":  false,
+                                     "DisableCleanupVMInstances":  false,
+                                     "WarmupTimeInSeconds":  0
+                                 }
+                             ]
+}

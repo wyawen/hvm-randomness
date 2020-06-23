@@ -1,0 +1,164 @@
+﻿**********************
+Windows PowerShell transcript start
+Start time: 20200611092518
+Username: NORTHAMERICA\v-yawenw
+RunAs User: NORTHAMERICA\v-yawenw
+Configuration Name: 
+Machine: GCRSANDBOX009 (Microsoft Windows NT 10.0.17763.0)
+Host Application: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+Process ID: 3788
+PSVersion: 5.1.17763.1129
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.17763.1129
+BuildVersion: 10.0.17763.1129
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Transcript started, output file is D:\hvm\Results\post-atc\memcached-new\randomness\newlog\160k\results-0611T0925-learning-1-5ms-deploy-full-explore\log.txt
+{
+    "abs_dir":  "D:\\hvm\\local-abs",
+    "abs_appsettings":  "appsettings.json",
+    "abs_data_dir":  "D:\\hvm\\abs-data",
+    "registry":  "D:\\hvm\\HarvestVM\\abs-registry",
+    "logger":  "D:\\hvm\\HypervMinrootLogger.exe",
+    "CpuGroups":  "D:\\hvm\\CpuGroups.exe",
+    "result_dir_base":  "D:\\hvm\\Results",
+    "reuse_existing_vm_instances":  false,
+    "buffer_sizes":  "1",
+    "iterations":  1,
+    "hvmagent_modes":  "SmartIPI_HOLES-0.1-sleep_ms",
+    "cpugroups_delay":  10000,
+    "ipi_delay":  1000,
+    "MinRootMask":  0,
+    "HvmVCPUs":  11,
+    "HvmTimeoutMin":  1,
+    "HvmHwThreadCountPerCore":  1,
+    "HvmAgentAffinity":  0,
+    "hvmagent":  {
+                     "path":  "D:\\hvm\\hvmagent.exe",
+                     "extra_args":  " --pin_primary "
+                 },
+    "smart_hvmagent":  {
+                           "path":  "D:\\hvm\\harvestvm.exe",
+                           "duration_sec":  62,
+                           "extra_args":  ""
+                       },
+    "LatSensitive":  {
+                         "vcpus":  11,
+                         "HwThreadCountPerCore":  1,
+                         "WorkerCnt":  4,
+                         "Duration":  62,
+                         "TracePath":  "trace-4-worker-80-qps-0.2-load-2-wakeups-const.txt"
+                     },
+    "CPUBully":  {
+                     "vcpus":  10,
+                     "HwThreadCountPerCore":  1,
+                     "Timeout":  1,
+                     "Workers":  11,
+                     "WarmupSeconds":  0
+                 },
+    "Memcached":  {
+                      "vcpus":  10,
+                      "ServerThreads":  8,
+                      "ServerMemoryMB":  4096,
+                      "ClientThreads":  1,
+                      "ClientQps":  160000,
+                      "HwThreadCountPerCore":  1,
+                      "DurationSec":  60
+                  },
+    "IndexServe":  {
+                       "vcpus":  9,
+                       "HwThreadCountPerCore":  1,
+                       "GetCaptionXLAWarmUpLogParameters":  "-q -SaasQueryPlan -LargeQueryLog -uniqueTraceIds -printPercentileLatencies -n 5 -c 10",
+                       "WarmUpLogPath":  "D:\\data\\querylogs\\warmup_query.log",
+                       "WarmUpLogQps":  2000,
+                       "RunWarmUpQueries":  1,
+                       "GetCaptionXLAQueryLogParameters":  "-q -SaasQueryPlan -LargeQueryLog -uniqueTraceIds -printPercentileLatencies -n 5 -c 10",
+                       "QueryLogPath":  "D:\\data\\querylogs\\PROD_2019-07-01_WebPrecision_Draco_25262_saaslego.tsv",
+                       "QueryLogPath_1":  "D:\\data\\querylogs\\warmup_query.log",
+                       "Orig_QueryLogPath":  "D:\\data\\querylogs\\PROD_2017-08-29_WebPrecision_Draco_24714.tsv",
+                       "QueryLogQps":  1500,
+                       "DurationSec":  60,
+                       "SaasQueryPlan":  " -SaasQueryPlan -LargeQueryLog ",
+                       "WarmupSeconds":  10
+                   },
+    "TeraSort":  {
+                     "vcpus":  10,
+                     "records":  10000000,
+                     "HwThreadCountPerCore":  1
+                 },
+    "PTeraSort":  {
+                      "vcpus":  10,
+                      "records":  10000000,
+                      "HwThreadCountPerCore":  1
+                  },
+    "HDInsight":  {
+                      "vcpus":  10,
+                      "Workers":  12,
+                      "Epochs":  2,
+                      "HwThreadCountPerCore":  1
+                  },
+    "PHDInsight":  {
+                       "vcpus":  10,
+                       "Workers":  12,
+                       "Epochs":  2,
+                       "HwThreadCountPerCore":  1
+                   },
+    "HostCountersFile":  "HostPerformanceCounters.csv",
+    "HostCounters":  [
+                         "\\Hyper-V Hypervisor Virtual Processor(_Total)\\% Total Run Time",
+                         "\\Hyper-V Hypervisor Virtual Processor(*)\\CPU Wait Time Per Dispatch",
+                         "\\Hyper-V Hypervisor Virtual Processor(*)\\CPU Wait Time Bucket X7",
+                         "\\Hyper-V Hypervisor Virtual Processor(*)\\CPU Wait Time Bucket X6",
+                         "\\Hyper-V Hypervisor Virtual Processor(*)\\CPU Wait Time Bucket X5",
+                         "\\Hyper-V Hypervisor Virtual Processor(*)\\CPU Wait Time Bucket X4",
+                         "\\Hyper-V Hypervisor Virtual Processor(*)\\CPU Wait Time Bucket X3",
+                         "\\Hyper-V Hypervisor Virtual Processor(*)\\CPU Wait Time Bucket X2",
+                         "\\Hyper-V Hypervisor Virtual Processor(*)\\CPU Wait Time Bucket X1",
+                         "\\Hyper-V Hypervisor Virtual Processor(*)\\CPU Wait Time Bucket 0",
+                         "\\Hyper-V Hypervisor Virtual Processor(*)\\CPU Wait Time Bucket 1",
+                         "\\Hyper-V Hypervisor Virtual Processor(*)\\CPU Wait Time Bucket 2",
+                         "\\Hyper-V Hypervisor Virtual Processor(*)\\CPU Wait Time Bucket 3",
+                         "\\Hyper-V Hypervisor Virtual Processor(*)\\CPU Wait Time Bucket 4",
+                         "\\Hyper-V Hypervisor Virtual Processor(*)\\CPU Wait Time Bucket 5",
+                         "\\Hyper-V Hypervisor Virtual Processor(*)\\CPU Wait Time Bucket 6",
+                         "\\Hyper-V Hypervisor Logical Processor(_Total)\\% Total Run Time",
+                         "\\Hyper-V Hypervisor Logical Processor(_Total)\\% Hypervisor Run Time",
+                         "\\Hyper-V Hypervisor Logical Processor(_Total)\\% Guest Run Time",
+                         "\\Hyper-V Hypervisor Virtual Processor(*)\\% Total Run Time",
+                         "\\Hyper-V Hypervisor Logical Processor(*)\\% Total Run Time",
+                         "\\Hyper-V Hypervisor Logical Processor(*)\\% Guest Run Time"
+                     ]
+}
+
+********************************
+*** Running Test:
+***     hvmagent-mode: SmartIPI_HOLES-0.1-sleep_ms
+***     buffer-size:   1
+***     Iter:  0  /   + 0
+********************************
+
+
+    Directory: D:\hvm\Results\post-atc\memcached-new\randomness\newlog\160k\results-0611T0925-learning-1
+    -5ms-deploy-full-explore\SmartIPI_HOLES-0.1-sleep_ms\buf-1
+
+
+Mode                LastWriteTime         Length Name
+----                -------------         ------ ----
+d-----        6/11/2020   9:25 AM                0
+Removing existing CpuGroups
+
+
+Removed existing CpuGroups
+primary_names = Memcached
+hvm_names = CPUBully
+--buffer 1 --csv D:\hvm\Results\post-atc\memcached-new\randomness\newlog\160k\results-0611T0925-learning-1-5ms-deploy-full-explore\SmartIPI_HOLES-0.1-sleep_ms\buf-1\0\hvmagent.csv --duration_sec 60 --primary_size 10  --primary_names Memcached  --hvm_names CPUBully --debug 0 --deploy_only 1 --model_name full_feedback.model --no_pred 0 --pred_plus_one 0 --pred_plus_offset 0 --learning_rate 0.1 --cost_function 0 --debug_peak 1 --logging 1 --minroot_mask 0x3ffffff --reactive_buffer_mode 0 --delay_ms 0 --mode IPI_HOLES  --learning_algo cb_explore --learning_mode 1 --learning_ms 5 --debug 0 --no_harvesting 0 --primary_alone 0 --timing 0 --feedback 0 --feedback_ms 0 --sleep_ms 0.1 --drop_bad_features 0 --read_cpu_sleep_us 50 --update_primary 1 --pred_one_over 0 --fixed_delay 0
+
+
+
+**********************
+Windows PowerShell transcript end
+End time: 20200611092833
+**********************
